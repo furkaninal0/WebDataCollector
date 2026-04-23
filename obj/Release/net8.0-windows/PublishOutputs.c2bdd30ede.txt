@@ -1,0 +1,14 @@
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.exe
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.deps.json
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.runtimeconfig.json
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.pdb
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\ClosedXML.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\ClosedXML.Parser.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\DocumentFormat.OpenXml.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\DocumentFormat.OpenXml.Framework.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\ExcelNumberFormat.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\HtmlAgilityPack.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\RBush.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\SixLabors.Fonts.dll
+C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\System.IO.Packaging.dll
