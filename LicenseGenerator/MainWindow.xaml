@@ -1,0 +1,40 @@
+﻿<Window x:Class="LicenseGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="INALCODE License Generator"
+        Height="320"
+        Width="420"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Machine Code" Margin="0,0,0,6"/>
+            <TextBox x:Name="TxtMachineCode" Height="32"/>
+
+            <TextBlock Text="Lisans Türü" Margin="0,16,0,6"/>
+            <ComboBox x:Name="CmbTier" Height="32" SelectedIndex="1">
+                <ComboBoxItem Content="FREE"/>
+                <ComboBoxItem Content="PRO"/>
+            </ComboBox>
+
+            <Button x:Name="BtnGenerate"
+                    Content="Key Oluştur"
+                    Height="36"
+                    Margin="0,18,0,0"
+                    Click="BtnGenerate_Click"/>
+
+            <TextBlock Text="Oluşan Key" Margin="0,18,0,6"/>
+            <TextBox x:Name="TxtResult"
+                     Height="32"
+                     IsReadOnly="True"/>
+
+            <Button x:Name="BtnCopy"
+                    Content="Kopyala"
+                    Height="32"
+                    Margin="0,12,0,0"
+                    Click="BtnCopy_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,476 @@
+﻿<Window x:Class="WebDataCollector.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Web Data Collector"
+        Height="860"
+        Width="1440"
+        MinHeight="760"
+        MinWidth="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="#0F172A">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="WindowBg" Color="#0F172A"/>
+        <SolidColorBrush x:Key="CardBg" Color="#1F2937"/>
+        <SolidColorBrush x:Key="CardBorder" Color="#334155"/>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="#3B82F6"/>
+        <SolidColorBrush x:Key="SuccessBrush" Color="#10B981"/>
+        <SolidColorBrush x:Key="WarningBrush" Color="#F59E0B"/>
+        <SolidColorBrush x:Key="DangerBrush" Color="#EF4444"/>
+        <SolidColorBrush x:Key="TextBrush" Color="#F8FAFC"/>
+        <SolidColorBrush x:Key="MutedTextBrush" Color="#94A3B8"/>
+
+        <Style x:Key="CardBorderStyle" TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource CardBg}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource CardBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="16"/>
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="Margin" Value="0,0,0,16"/>
+        </Style>
+
+        <Style x:Key="SectionTitleStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,14"/>
+        </Style>
+
+        <Style x:Key="BodyTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
+            <Setter Property="FontSize" Value="13"/>
+        </Style>
+
+        <Style x:Key="ModernCheckBoxStyle" TargetType="CheckBox">
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="ModernTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#0B1220"/>
+            <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource CardBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+        </Style>
+
+        <Style x:Key="ModernButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="16,10"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource WindowBg}">
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="88"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="28"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Border Grid.Row="0" Background="#0B1220" BorderBrush="#1E293B" BorderThickness="0,0,0,1" Grid.ColumnSpan="2">
+            <Grid Margin="28,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- SOL -->
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Width="44" Height="44" CornerRadius="10" Background="#111827" Margin="0,0,14,0">
+                        <Image Source="/Assets/fffavicon.png"
+           Stretch="Uniform"
+           Margin="-1,-2,-3,-4"/>
+                    </Border>
+
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="INALCODE Developer"
+                                   Foreground="{StaticResource TextBrush}"
+                                   FontSize="28"
+                                   FontWeight="Bold"/>
+                        <TextBlock Text="Lead scraping and filtering dashboard"
+                                   Foreground="{StaticResource MutedTextBrush}"
+                                   FontSize="13"
+                                   Margin="0,4,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- SAĞ -->
+                <Grid Grid.Column="1" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0"
+                            Background="#1E293B"
+                            CornerRadius="10"
+                            Padding="14,8"
+                            MinWidth="120">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Durum: "
+                                       Foreground="{StaticResource MutedTextBrush}"
+                                       FontSize="12"/>
+                            <TextBlock x:Name="TxtStatus"
+                                       Text="Hazır"
+                                       Foreground="{StaticResource SuccessBrush}"
+                                       FontWeight="SemiBold"
+                                       FontSize="12"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Column="2"
+                            Background="#1E293B"
+                            CornerRadius="10"
+                            Padding="14,8"
+                            MinWidth="145">
+                        <StackPanel>
+                            <TextBlock x:Name="TxtLicensePlan"
+                                       Text="Plan: Free"
+                                       Foreground="{StaticResource TextBrush}"
+                                       FontWeight="SemiBold"
+                                       FontSize="12"/>
+                            <TextBlock x:Name="TxtLicenseUsage"
+                                       Text="Limit: 20 URL"
+                                       Foreground="{StaticResource MutedTextBrush}"
+                                       FontSize="11"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Button x:Name="BtnLicensePanel"
+                            Grid.Column="4"
+                            Content="Lisans"
+                            Background="#374151"
+                            Style="{StaticResource ModernButtonStyle}"
+                            Margin="0"
+                            MinWidth="80"/>
+
+                    <Button x:Name="BtnExport"
+                            Grid.Column="6"
+                            Content="Excel Aç"
+                            Background="#1E293B"
+                            Style="{StaticResource ModernButtonStyle}"
+                            Margin="0"
+                            MinWidth="90"/>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <!-- MAIN -->
+        <Grid Grid.Row="1" Margin="24,24,24,24" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="360"/>
+                <ColumnDefinition Width="16"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- LEFT SIDEBAR -->
+            <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Border Style="{StaticResource CardBorderStyle}">
+                        <StackPanel>
+                            <TextBlock Text="URL Kaynağı" Style="{StaticResource SectionTitleStyle}"/>
+
+                            <TextBlock Text="URL Listesi"
+                                       Style="{StaticResource BodyTextStyle}"
+                                       Margin="0,0,0,6"/>
+
+                            <TextBox x:Name="TxtUrls"
+                                     Style="{StaticResource ModernTextBoxStyle}"
+                                     Height="170"
+                                     AcceptsReturn="True"
+                                     VerticalScrollBarVisibility="Auto"
+                                     TextWrapping="Wrap"/>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="BtnLoadFile"
+                                        Content="TXT / CSV Yükle"
+                                        Background="{StaticResource PrimaryBrush}"
+                                        Style="{StaticResource ModernButtonStyle}"/>
+
+                                <Button x:Name="BtnClearUrls"
+                                        Content="Temizle"
+                                        Background="#374151"
+                                        Style="{StaticResource ModernButtonStyle}"
+                                        Margin="0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource CardBorderStyle}">
+                        <StackPanel>
+                            <TextBlock Text="Filtreler" Style="{StaticResource SectionTitleStyle}"/>
+
+                            <CheckBox x:Name="ChkEmail" Content="Email Ara" IsChecked="True" Style="{StaticResource ModernCheckBoxStyle}"/>
+                            <CheckBox x:Name="ChkPhone" Content="Telefon Ara" IsChecked="True" Style="{StaticResource ModernCheckBoxStyle}"/>
+                            <CheckBox x:Name="ChkFax" Content="Fax Ara" IsChecked="True" Style="{StaticResource ModernCheckBoxStyle}"/>
+                            <CheckBox x:Name="ChkCity" Content="Şehir Ara" IsChecked="True" Style="{StaticResource ModernCheckBoxStyle}"/>
+                            <CheckBox x:Name="ChkAddress" Content="Adres Ara" IsChecked="True" Style="{StaticResource ModernCheckBoxStyle}"/>
+                            <CheckBox x:Name="ChkWhatsApp" Content="WhatsApp Ara" IsChecked="True" Style="{StaticResource ModernCheckBoxStyle}"/>
+                            <CheckBox x:Name="ChkSocialMedia" Content="Sosyal Medya Ara" IsChecked="True" Style="{StaticResource ModernCheckBoxStyle}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource CardBorderStyle}">
+                        <StackPanel>
+                            <TextBlock Text="Gelişmiş Ayarlar" Style="{StaticResource SectionTitleStyle}"/>
+
+                            <TextBlock Text="Minimum Kalite Skoru" Style="{StaticResource BodyTextStyle}" Margin="0,0,0,6"/>
+                            <TextBox x:Name="TxtMinScore" Text="0" Style="{StaticResource ModernTextBoxStyle}"/>
+
+                            <TextBlock Text="Maksimum Alt Sayfa" Style="{StaticResource BodyTextStyle}" Margin="0,0,0,6"/>
+                            <TextBox x:Name="TxtMaxLinks" Text="6" Style="{StaticResource ModernTextBoxStyle}"/>
+
+                            <TextBlock Text="İstek Gecikmesi (ms)" Style="{StaticResource BodyTextStyle}" Margin="0,0,0,6"/>
+                            <TextBox x:Name="TxtDelayMs" Text="1200" Style="{StaticResource ModernTextBoxStyle}"/>
+
+                            <CheckBox x:Name="ChkIncludeFailed"
+                                      Content="Başarısızları da kaydet"
+                                      IsChecked="True"
+                                      Style="{StaticResource ModernCheckBoxStyle}"/>
+
+                            <CheckBox x:Name="ChkUpdateExisting"
+                                      Content="Aynı URL varsa güncelle"
+                                      IsChecked="True"
+                                      Style="{StaticResource ModernCheckBoxStyle}"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+
+            <!-- RIGHT CONTENT -->
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="16"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="16"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Style="{StaticResource CardBorderStyle}" Margin="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+                            <TextBlock Text="Tarama Kontrolü"
+                                       Style="{StaticResource SectionTitleStyle}"/>
+                            <TextBlock Text="Filtreleri seçip taramayı başlatın. Sonuçlar canlı olarak aşağıda akacaktır."
+                                       Style="{StaticResource BodyTextStyle}"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="BtnStart"
+                                    Content="Taramayı Başlat"
+                                    Background="{StaticResource PrimaryBrush}"
+                                    Style="{StaticResource ModernButtonStyle}"/>
+
+                            <Button x:Name="BtnStop"
+                                    Content="Durdur"
+                                    Background="{StaticResource DangerBrush}"
+                                    Style="{StaticResource ModernButtonStyle}"/>
+
+                            <Button x:Name="BtnOpenOutputFolder"
+                                    Content="Çıktı Klasörü"
+                                    Background="#374151"
+                                    Style="{StaticResource ModernButtonStyle}"
+                                    Margin="0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <UniformGrid Grid.Row="2" Columns="4">
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="0,0,12,0">
+                        <StackPanel>
+                            <TextBlock Text="Toplam URL" Style="{StaticResource BodyTextStyle}"/>
+                            <TextBlock x:Name="TxtTotalUrls"
+                                       Text="0"
+                                       Foreground="{StaticResource TextBrush}"
+                                       FontSize="28"
+                                       FontWeight="Bold"
+                                       Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="0,0,12,0">
+                        <StackPanel>
+                            <TextBlock Text="Başarılı" Style="{StaticResource BodyTextStyle}"/>
+                            <TextBlock x:Name="TxtSuccessCount"
+                                       Text="0"
+                                       Foreground="{StaticResource SuccessBrush}"
+                                       FontSize="28"
+                                       FontWeight="Bold"
+                                       Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="0,0,12,0">
+                        <StackPanel>
+                            <TextBlock Text="Başarısız" Style="{StaticResource BodyTextStyle}"/>
+                            <TextBlock x:Name="TxtFailedCount"
+                                       Text="0"
+                                       Foreground="{StaticResource DangerBrush}"
+                                       FontSize="28"
+                                       FontWeight="Bold"
+                                       Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource CardBorderStyle}" Margin="0">
+                        <StackPanel>
+                            <TextBlock Text="Ortalama Skor" Style="{StaticResource BodyTextStyle}"/>
+                            <TextBlock x:Name="TxtAverageScore"
+                                       Text="0"
+                                       Foreground="{StaticResource WarningBrush}"
+                                       FontSize="28"
+                                       FontWeight="Bold"
+                                       Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </UniformGrid>
+
+                <Border Grid.Row="4" Style="{StaticResource CardBorderStyle}" Margin="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="12"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="14"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Canlı Log"
+                                   Style="{StaticResource SectionTitleStyle}"/>
+
+                        <ProgressBar x:Name="ProgressScan"
+                                     Grid.Row="2"
+                                     Height="12"
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="0"
+                                     Foreground="{StaticResource PrimaryBrush}"
+                                     Background="#0B1220"/>
+
+                        <TextBox x:Name="TxtLog"
+                                 Grid.Row="4"
+                                 Background="#0B1220"
+                                 Foreground="#E2E8F0"
+                                 BorderBrush="{StaticResource CardBorder}"
+                                 BorderThickness="1"
+                                 FontFamily="Consolas"
+                                 FontSize="13"
+                                 Padding="14"
+                                 AcceptsReturn="True"
+                                 VerticalScrollBarVisibility="Auto"
+                                 HorizontalScrollBarVisibility="Auto"
+                                 TextWrapping="Wrap"
+                                 IsReadOnly="True"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+
+        <!-- FOOTER -->
+        <Border Grid.Row="2"
+        Background="#0B1220"
+        BorderBrush="#1E293B"
+        BorderThickness="0,1,0,0"
+        Height="32">
+
+            <Grid Margin="16,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- SOL -->
+                <TextBlock Grid.Column="0"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Foreground="#94A3B8"
+                   FontSize="10"
+                   Text="© 2026 INALCODE — All rights reserved"/>
+
+                <!-- SAĞ -->
+                <TextBlock Grid.Column="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   Foreground="#94A3B8"
+                   FontSize="10"
+                   Text="INALCODE Developer v1.0"/>
+            </Grid>
+        </Border>
+
+        <!-- LICENSE POPUP -->
+        <Popup x:Name="LicensePopup"
+               PlacementTarget="{Binding ElementName=BtnLicensePanel}"
+               Placement="Bottom"
+               StaysOpen="False"
+               AllowsTransparency="True" Grid.ColumnSpan="2">
+            <Border Width="340"
+                    Background="#111827"
+                    BorderBrush="#334155"
+                    BorderThickness="1"
+                    CornerRadius="16"
+                    Padding="18">
+                <StackPanel>
+                    <TextBlock Text="Lisans Yönetimi"
+                               Foreground="{StaticResource TextBrush}"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,14"/>
+
+                    <TextBlock Text="Makine Kodu"
+                               Foreground="{StaticResource MutedTextBrush}"
+                               FontSize="13"
+                               Margin="0,0,0,6"/>
+                    <TextBox x:Name="TxtMachineCode"
+                             Style="{StaticResource ModernTextBoxStyle}"
+                             IsReadOnly="True"/>
+
+                    <TextBlock Text="Lisans Anahtarı"
+                               Foreground="{StaticResource MutedTextBrush}"
+                               FontSize="13"
+                               Margin="0,0,0,6"/>
+                    <TextBox x:Name="TxtLicenseKey"
+                             Style="{StaticResource ModernTextBoxStyle}"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnActivateLicense"
+                                Content="Aktifleştir"
+                                Background="{StaticResource PrimaryBrush}"
+                                Style="{StaticResource ModernButtonStyle}"/>
+
+                        <Button x:Name="BtnCopyMachineCode"
+                                Content="Makine Kodunu Kopyala"
+                                Background="#374151"
+                                Style="{StaticResource ModernButtonStyle}"
+                                Margin="0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</Window>
