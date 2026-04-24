@@ -1,0 +1,5 @@
+C:\Users\Asus Tuf15\Desktop\LicenseGenrator\LicenseGenerator.exe
+C:\Users\Asus Tuf15\Desktop\LicenseGenrator\LicenseGenerator.dll
+C:\Users\Asus Tuf15\Desktop\LicenseGenrator\LicenseGenerator.deps.json
+C:\Users\Asus Tuf15\Desktop\LicenseGenrator\LicenseGenerator.runtimeconfig.json
+C:\Users\Asus Tuf15\Desktop\LicenseGenrator\LicenseGenerator.pdb

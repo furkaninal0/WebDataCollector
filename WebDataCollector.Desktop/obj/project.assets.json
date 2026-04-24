@@ -80,7 +80,7 @@
           }
         }
       },
-      "HtmlAgilityPack/1.12.4": {
+      "HtmlAgilityPack/1.12.2": {
         "type": "package",
         "compile": {
           "lib/net7.0/HtmlAgilityPack.dll": {
@@ -133,20 +133,6 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "WebDataCollector/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "ClosedXML": "0.105.0",
-          "HtmlAgilityPack": "1.12.4"
-        },
-        "compile": {
-          "bin/placeholder/WebDataCollector.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WebDataCollector.dll": {}
         }
       }
     }
@@ -252,14 +238,14 @@
         "lib/netstandard2.0/ExcelNumberFormat.xml"
       ]
     },
-    "HtmlAgilityPack/1.12.4": {
-      "sha512": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ==",
+    "HtmlAgilityPack/1.12.2": {
+      "sha512": "btF/9sB65h0V9ipZxVfEQ9fxDwXSFRwhi4Z1qFBgnXONqWVKZE3LxS0JEMW73G3gvrFI7/IAqLA1y/15HDa3fw==",
       "type": "package",
-      "path": "htmlagilitypack/1.12.4",
+      "path": "htmlagilitypack/1.12.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "htmlagilitypack.1.12.4.nupkg.sha512",
+        "htmlagilitypack.1.12.2.nupkg.sha512",
         "htmlagilitypack.nuspec",
         "lib/Net35/HtmlAgilityPack.dll",
         "lib/Net35/HtmlAgilityPack.pdb",
@@ -361,16 +347,12 @@
         "system.io.packaging.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "WebDataCollector/1.0.0": {
-      "type": "project",
-      "path": "../WebDataCollector/WebDataCollector.csproj",
-      "msbuildProject": "../WebDataCollector/WebDataCollector.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "WebDataCollector >= 1.0.0"
+      "ClosedXML >= 0.105.0",
+      "HtmlAgilityPack >= 1.12.2"
     ]
   },
   "packageFolders": {
@@ -380,11 +362,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj",
+      "projectUniqueName": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj",
       "projectName": "WebDataCollector.Desktop",
-      "projectPath": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj",
+      "projectPath": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj",
       "packagesPath": "C:\\Users\\Asus Tuf15\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector.Desktop\\obj\\",
+      "outputPath": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -404,11 +386,7 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {
-            "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.csproj": {
-              "projectPath": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -426,6 +404,16 @@
     "frameworks": {
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "ClosedXML": {
+            "target": "Package",
+            "version": "[0.105.0, )"
+          },
+          "HtmlAgilityPack": {
+            "target": "Package",
+            "version": "[1.12.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

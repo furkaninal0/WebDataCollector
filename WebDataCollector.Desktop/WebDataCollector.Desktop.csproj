@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<ItemGroup>
-		<ProjectReference Include="..\WebDataCollector\WebDataCollector.csproj" />
+		<Resource Include="Assets\fffavicon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Resource Include="Assets\fffavicon.png" />
+		<PackageReference Include="ClosedXML" Version="0.105.0" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.12.2" />
 	</ItemGroup>
 
 	<PropertyGroup>
@@ -14,6 +15,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UseWPF>true</UseWPF>
+		<ApplicationIcon>Assets\kopya.ico</ApplicationIcon>
+
 	</PropertyGroup>
 
 </Project>

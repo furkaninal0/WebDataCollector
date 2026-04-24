@@ -3,13 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AEF6B24-224D-4909-BF5B-C011F8DF3F58}|..\\LicenseGenerator\\LicenseGenerator.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\licensegenerator\\licensegenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\licenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\licenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AEF6B24-224D-4909-BF5B-C011F8DF3F58}|..\\LicenseGenerator\\LicenseGenerator.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\licensegenerator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\webdatacollector.desktop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\webdatacollector.desktop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AEF6B24-224D-4909-BF5B-C011F8DF3F58}|..\\LicenseGenerator\\LicenseGenerator.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\licensegenerator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1C994420-22D0-CECA-919E-FB6D3F52FC4A}|LicenseGenerator\\LicenseGenerator.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\licensegenerator\\licensegenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1C994420-22D0-CECA-919E-FB6D3F52FC4A}|LicenseGenerator\\LicenseGenerator.csproj|solutionrelative:licensegenerator\\licensegenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\urlreaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\urlreaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\linkfinderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\linkfinderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\httpfetchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\httpfetchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\excelexportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\excelexportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\scraperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\scraperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\addressextractorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\addressextractorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\advanceddataextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\advanceddataextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|c:\\users\\asus tuf15\\documents\\github\\webdatacollector\\webdatacollector\\webdatacollector.desktop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{814265F5-DF7B-7C7F-79C6-373B33179048}|WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj|solutionrelative:webdatacollector.desktop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,41 +70,138 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LicenseGenerator",
-              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\LicenseGenerator\\LicenseGenerator.csproj",
-              "RelativeDocumentMoniker": "..\\LicenseGenerator\\LicenseGenerator.csproj",
-              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\LicenseGenerator\\LicenseGenerator.csproj",
-              "RelativeToolTip": "..\\LicenseGenerator\\LicenseGenerator.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "LicenseGenerator.csproj",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\LicenseGenerator\\LicenseGenerator.csproj",
+              "RelativeDocumentMoniker": "LicenseGenerator\\LicenseGenerator.csproj",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\LicenseGenerator\\LicenseGenerator.csproj",
+              "RelativeToolTip": "LicenseGenerator\\LicenseGenerator.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-23T21:50:24.387Z",
+              "WhenOpened": "2026-04-24T14:21:39.046Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UrlReaderService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\UrlReaderService.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\UrlReaderService.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\UrlReaderService.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\UrlReaderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:10:08.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LicenseService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\LicenseService.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\LicenseService.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\LicenseService.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\LicenseService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:09:28.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LinkFinderService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\LinkFinderService.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\LinkFinderService.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\LinkFinderService.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\LinkFinderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:09:10.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ExcelExportService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\ExcelExportService.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\ExcelExportService.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\ExcelExportService.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\ExcelExportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:08:08.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ScraperService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\ScraperService.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\ScraperService.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\ScraperService.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\ScraperService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:08:05.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddressExtractorService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\AddressExtractorService.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\AddressExtractorService.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\AddressExtractorService.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\AddressExtractorService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAD4vyYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:05:43.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HttpFetchService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\HttpFetchService.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\HttpFetchService.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\HttpFetchService.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\HttpFetchService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:05:38.007Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\LicenseGenerator\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "..\\LicenseGenerator\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\LicenseGenerator\\MainWindow.xaml.cs",
-              "RelativeToolTip": "..\\LicenseGenerator\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwD8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T21:48:15.443Z",
+              "Title": "WebDataCollector.Desktop.csproj",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj",
+              "RelativeToolTip": "WebDataCollector.Desktop\\WebDataCollector.Desktop.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-24T14:02:06.288Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\LicenseGenerator\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "..\\LicenseGenerator\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\LicenseGenerator\\MainWindow.xaml",
-              "RelativeToolTip": "..\\LicenseGenerator\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-23T21:47:24.362Z",
-              "EditorCaption": ""
+              "DocumentIndex": 9,
+              "Title": "AdvancedDataExtractor.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\AdvancedDataExtractor.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\AdvancedDataExtractor.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\AdvancedDataExtractor.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\AdvancedDataExtractor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:05:41.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WebDataCollector.Desktop\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Asus Tuf15\\Documents\\GitHub\\WebDataCollector\\WebDataCollector\\WebDataCollector.Desktop\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WebDataCollector.Desktop\\MainWindow.xaml.cs",
+              "ViewState": "AgIAALIAAAAAAAAAAAAMwM4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T14:03:00.903Z"
             }
           ]
         },

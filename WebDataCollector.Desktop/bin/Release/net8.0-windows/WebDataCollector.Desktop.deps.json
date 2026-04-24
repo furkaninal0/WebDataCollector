@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "WebDataCollector.Desktop/1.0.0": {
         "dependencies": {
-          "WebDataCollector": "1.0.0"
+          "ClosedXML": "0.105.0",
+          "HtmlAgilityPack": "1.12.2"
         },
         "runtime": {
           "WebDataCollector.Desktop.dll": {}
@@ -67,11 +68,11 @@
           }
         }
       },
-      "HtmlAgilityPack/1.12.4": {
+      "HtmlAgilityPack/1.12.2": {
         "runtime": {
           "lib/net7.0/HtmlAgilityPack.dll": {
-            "assemblyVersion": "1.12.4.0",
-            "fileVersion": "1.12.4.0"
+            "assemblyVersion": "1.12.2.0",
+            "fileVersion": "1.12.2.0"
           }
         }
       },
@@ -96,18 +97,6 @@
           "lib/net8.0/System.IO.Packaging.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.1024.46610"
-          }
-        }
-      },
-      "WebDataCollector/1.0.0": {
-        "dependencies": {
-          "ClosedXML": "0.105.0",
-          "HtmlAgilityPack": "1.12.4"
-        },
-        "runtime": {
-          "WebDataCollector.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -154,12 +143,12 @@
       "path": "excelnumberformat/1.1.0",
       "hashPath": "excelnumberformat.1.1.0.nupkg.sha512"
     },
-    "HtmlAgilityPack/1.12.4": {
+    "HtmlAgilityPack/1.12.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ==",
-      "path": "htmlagilitypack/1.12.4",
-      "hashPath": "htmlagilitypack.1.12.4.nupkg.sha512"
+      "sha512": "sha512-btF/9sB65h0V9ipZxVfEQ9fxDwXSFRwhi4Z1qFBgnXONqWVKZE3LxS0JEMW73G3gvrFI7/IAqLA1y/15HDa3fw==",
+      "path": "htmlagilitypack/1.12.2",
+      "hashPath": "htmlagilitypack.1.12.2.nupkg.sha512"
     },
     "RBush.Signed/4.0.0": {
       "type": "package",
@@ -181,11 +170,6 @@
       "sha512": "sha512-KYkIOAvPexQOLDxPO2g0BVoWInnQhPpkFzRqvNrNrMhVT6kqhVr0zEb6KCHlptLFukxnZrjuMVAnxK7pOGUYrw==",
       "path": "system.io.packaging/8.0.1",
       "hashPath": "system.io.packaging.8.0.1.nupkg.sha512"
-    },
-    "WebDataCollector/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

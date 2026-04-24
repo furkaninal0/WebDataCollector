@@ -1,7 +1,4 @@
-C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.exe
 C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.Desktop.exe
-C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.deps.json
-C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.runtimeconfig.json
 C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.Desktop.dll
 C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.Desktop.deps.json
 C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.Desktop.runtimeconfig.json
@@ -15,5 +12,3 @@ C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\HtmlAgilityPack.dll
 C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\RBush.dll
 C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\SixLabors.Fonts.dll
 C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\System.IO.Packaging.dll
-C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.dll
-C:\Users\Asus Tuf15\Desktop\WebDataCollector.Desktop\WebDataCollector.pdb

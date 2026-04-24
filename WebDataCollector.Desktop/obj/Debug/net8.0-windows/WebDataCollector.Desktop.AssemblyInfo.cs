@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebDataCollector.Desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+796ed893099960b55b079ce4d7f32d150ec6810a")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebDataCollector.Desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebDataCollector.Desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
