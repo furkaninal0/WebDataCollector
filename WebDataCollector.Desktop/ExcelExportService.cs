@@ -9,10 +9,18 @@ public class ExcelExportService
     private const int ExcelCellLimit = 32767;
     private const int SafeCellLimit = 32000;
 
-    public void Export(List<ScrapeResult> newResults)
+    public string Export(List<ScrapeResult> newResults)
     {
-        var basePath = Environment.CurrentDirectory;
-        var masterFilePath = Path.Combine(basePath, "master_output.xlsx");
+        var outputFolder = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+            "INALCODE",
+            "WebDataCollector",
+            "Outputs"
+        );
+
+        Directory.CreateDirectory(outputFolder);
+
+        var masterFilePath = Path.Combine(outputFolder, "master_output.xlsx");
 
         var allResults = LoadExistingResults(masterFilePath);
 
@@ -62,10 +70,7 @@ public class ExcelExportService
             }
         }
 
-        SaveResults(allResults, masterFilePath);
-
-        Console.WriteLine();
-        Console.WriteLine($"Ana dosya güncellendi: {masterFilePath}");
+        return SaveResults(allResults, masterFilePath);
     }
 
     private List<ScrapeResult> LoadExistingResults(string filePath)
@@ -83,6 +88,7 @@ public class ExcelExportService
         for (int row = 2; row <= lastRow; row++)
         {
             var url = worksheet.Cell(row, 1).GetString().Trim();
+
             if (string.IsNullOrWhiteSpace(url))
                 continue;
 
@@ -114,10 +120,12 @@ public class ExcelExportService
                 Cities = SplitCellValue(worksheet.Cell(row, 24).GetString()),
                 Addresses = SplitCellValue(worksheet.Cell(row, 25).GetString()),
                 VisitedPages = SplitCellValue(worksheet.Cell(row, 26).GetString()),
-                IsSuccess = worksheet.Cell(row, 27).GetBoolean(),
                 ErrorMessage = worksheet.Cell(row, 28).GetString(),
                 Sector = worksheet.Cell(row, 29).GetString()
             };
+
+            if (bool.TryParse(worksheet.Cell(row, 27).GetString(), out var isSuccess))
+                item.IsSuccess = isSuccess;
 
             if (int.TryParse(worksheet.Cell(row, 30).GetString(), out var score))
                 item.QualityScore = score;
@@ -134,46 +142,25 @@ public class ExcelExportService
         return results;
     }
 
-    private void SaveResults(List<ScrapeResult> results, string filePath)
+    private string SaveResults(List<ScrapeResult> results, string filePath)
     {
         using var workbook = new XLWorkbook();
         var worksheet = workbook.Worksheets.Add("Results");
 
-        worksheet.Cell(1, 1).Value = "URL";
-        worksheet.Cell(1, 2).Value = "Firma Adı";
-        worksheet.Cell(1, 3).Value = "Ana Email";
-        worksheet.Cell(1, 4).Value = "Ana Telefon";
-        worksheet.Cell(1, 5).Value = "Ana Fax";
-        worksheet.Cell(1, 6).Value = "Ana Şehir";
-        worksheet.Cell(1, 7).Value = "Ana Adres";
-        worksheet.Cell(1, 8).Value = "WhatsApp";
-        worksheet.Cell(1, 9).Value = "Instagram";
-        worksheet.Cell(1, 10).Value = "Facebook";
-        worksheet.Cell(1, 11).Value = "LinkedIn";
-        worksheet.Cell(1, 12).Value = "Twitter/X";
-        worksheet.Cell(1, 13).Value = "YouTube";
-        worksheet.Cell(1, 14).Value = "TikTok";
-        worksheet.Cell(1, 15).Value = "Telegram";
-        worksheet.Cell(1, 16).Value = "Pinterest";
-        worksheet.Cell(1, 17).Value = "Threads";
-        worksheet.Cell(1, 18).Value = "Discord";
-        worksheet.Cell(1, 19).Value = "Medium";
-        worksheet.Cell(1, 20).Value = "GitHub";
-        worksheet.Cell(1, 21).Value = "Bulunan Emailler";
-        worksheet.Cell(1, 22).Value = "Bulunan Telefonlar";
-        worksheet.Cell(1, 23).Value = "Bulunan Faxlar";
-        worksheet.Cell(1, 24).Value = "Bulunan Şehirler";
-        worksheet.Cell(1, 25).Value = "Bulunan Adresler";
-        worksheet.Cell(1, 26).Value = "Gezilen Sayfalar";
-        worksheet.Cell(1, 27).Value = "Başarılı";
-        worksheet.Cell(1, 28).Value = "Hata";
-        worksheet.Cell(1, 29).Value = "Sektör";
-        worksheet.Cell(1, 30).Value = "Kalite Skoru";
-        worksheet.Cell(1, 31).Value = "Durum";
-        worksheet.Cell(1, 32).Value = "Tarama Tarihi";
+        string[] headers =
+        {
+            "URL", "Firma Adı", "Ana Email", "Ana Telefon", "Ana Fax", "Ana Şehir", "Ana Adres",
+            "WhatsApp", "Instagram", "Facebook", "LinkedIn", "Twitter/X", "YouTube", "TikTok",
+            "Telegram", "Pinterest", "Threads", "Discord", "Medium", "GitHub",
+            "Bulunan Emailler", "Bulunan Telefonlar", "Bulunan Faxlar", "Bulunan Şehirler",
+            "Bulunan Adresler", "Gezilen Sayfalar", "Başarılı", "Hata", "Sektör",
+            "Kalite Skoru", "Durum", "Tarama Tarihi"
+        };
 
-        var headerRange = worksheet.Range(1, 1, 1, 32);
-        headerRange.Style.Font.Bold = true;
+        for (int i = 0; i < headers.Length; i++)
+            worksheet.Cell(1, i + 1).Value = headers[i];
+
+        worksheet.Range(1, 1, 1, 32).Style.Font.Bold = true;
 
         int row = 2;
 
@@ -211,6 +198,7 @@ public class ExcelExportService
             worksheet.Cell(row, 30).Value = item.QualityScore;
             SetCell(worksheet, row, 31, item.Status.ToString());
             SetCell(worksheet, row, 32, item.ScrapedAt.ToString("yyyy-MM-dd HH:mm:ss"));
+
             row++;
         }
 
@@ -219,6 +207,7 @@ public class ExcelExportService
         try
         {
             workbook.SaveAs(filePath);
+            return filePath;
         }
         catch (IOException)
         {
@@ -227,9 +216,9 @@ public class ExcelExportService
                                    ".xlsx";
 
             var fallbackPath = Path.Combine(Path.GetDirectoryName(filePath)!, fallbackFileName);
-            workbook.SaveAs(fallbackPath);
 
-            Console.WriteLine($"Dosya açık olduğu için alternatif dosya oluşturuldu: {fallbackPath}");
+            workbook.SaveAs(fallbackPath);
+            return fallbackPath;
         }
     }
 
@@ -293,6 +282,6 @@ public class ExcelExportService
         if (value.Length <= ExcelCellLimit)
             return value;
 
-        return value[..32000] + "... [TRUNCATED]";
+        return value[..SafeCellLimit] + "... [TRUNCATED]";
     }
 }

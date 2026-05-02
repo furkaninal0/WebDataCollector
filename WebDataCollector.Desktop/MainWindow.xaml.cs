@@ -232,6 +232,9 @@ public partial class MainWindow : Window
                 }
 
                 var result = await scraper.ScrapeAsync(url, options);
+                AppendLog($"DEBUG: result status = {result.Status}");
+                AppendLog($"DEBUG: email = {result.Email}");
+                AppendLog($"DEBUG: phone = {result.Phone}");
 
                 if (options.IncludeFailedResults || result.IsSuccess)
                 {
@@ -277,14 +280,12 @@ public partial class MainWindow : Window
 
             if (!cancelled)
             {
-                if (results.Count > 0)
+                var excelPath = excel.Export(results);
+                AppendLog($"Excel çıktısı oluşturuldu: {excelPath}");
+
+                if (results.Count == 0)
                 {
-                    excel.Export(results);
-                    AppendLog("Excel çıktısı oluşturuldu.");
-                }
-                else
-                {
-                    AppendLog("Kaydedilecek sonuç bulunamadı.");
+                    AppendLog("UYARI: Veri bulunamadı ama boş Excel oluşturuldu.");
                 }
 
                 TxtStatus.Text = "Tamamlandı";
@@ -323,7 +324,14 @@ public partial class MainWindow : Window
 
     private void BtnOpenOutputFolder_Click(object sender, RoutedEventArgs e)
     {
-        var path = AppDomain.CurrentDomain.BaseDirectory;
+        var path = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+            "INALCODE",
+            "WebDataCollector",
+            "Outputs"
+        );
+
+        Directory.CreateDirectory(path);
 
         Process.Start(new ProcessStartInfo
         {
@@ -333,10 +341,16 @@ public partial class MainWindow : Window
 
         AppendLog($"Çıktı klasörü açıldı: {path}");
     }
-
     private void BtnExport_Click(object sender, RoutedEventArgs e)
     {
-        var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "master_output.xlsx");
+        var outputFolder = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+            "INALCODE",
+            "WebDataCollector",
+            "Outputs"
+        );
+
+        var path = Path.Combine(outputFolder, "master_output.xlsx");
 
         if (File.Exists(path))
         {
@@ -350,10 +364,9 @@ public partial class MainWindow : Window
         }
         else
         {
-            AppendLog("master_output.xlsx henüz oluşmadı.");
+            AppendLog($"master_output.xlsx henüz oluşmadı. Kontrol edilen yer: {path}");
         }
     }
-
     private void UpdateUrlCount()
     {
         var count = TxtUrls.Text

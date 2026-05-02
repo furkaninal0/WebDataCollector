@@ -1,6 +1,0 @@
-C:\Users\Asus Tuf15\Documents\GitHub\WebDataCollector\WebDataCollector\obj\Debug\net8.0-windows\WebDataCollector.csproj.AssemblyReference.cache
-C:\Users\Asus Tuf15\Documents\GitHub\WebDataCollector\WebDataCollector\obj\Debug\net8.0-windows\WebDataCollector.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Asus Tuf15\Documents\GitHub\WebDataCollector\WebDataCollector\obj\Debug\net8.0-windows\WebDataCollector.AssemblyInfoInputs.cache
-C:\Users\Asus Tuf15\Documents\GitHub\WebDataCollector\WebDataCollector\obj\Debug\net8.0-windows\WebDataCollector.AssemblyInfo.cs
-C:\Users\Asus Tuf15\Documents\GitHub\WebDataCollector\WebDataCollector\obj\Debug\net8.0-windows\WebDataCollector.csproj.CoreCompileInputs.cache
-C:\Users\Asus Tuf15\Documents\GitHub\WebDataCollector\WebDataCollector\obj\Debug\net8.0-windows\WebDataCollector.sourcelink.json

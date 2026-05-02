@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LicenseGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+796ed893099960b55b079ce4d7f32d150ec6810a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8d1e7a6c76eeab5375bd232ffcbc564ccc4b048")]
 [assembly: System.Reflection.AssemblyProductAttribute("LicenseGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LicenseGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

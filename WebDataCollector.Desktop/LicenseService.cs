@@ -14,15 +14,6 @@ public class LicenseService
     public LicenseInfo GetCurrentLicense()
     {
         var machineCode = GenerateMachineCode();
-        return new LicenseInfo
-        {
-            IsValid = true,
-            Tier = LicenseTier.Free,
-            MachineCode = machineCode,
-            MaxUrlLimit = 20,
-            UsedUrlCount = 0,
-            LicenseKey = string.Empty
-        };
         var savedState = LoadSavedLicenseState();
 
         if (savedState is null)
@@ -32,7 +23,7 @@ public class LicenseService
                 IsValid = true,
                 Tier = LicenseTier.Free,
                 MachineCode = machineCode,
-                MaxUrlLimit = 20,
+                MaxUrlLimit = 10,
                 UsedUrlCount = 0,
                 LicenseKey = string.Empty
             };
@@ -41,7 +32,6 @@ public class LicenseService
             return defaultFree;
         }
 
-        // Makine değiştiyse sıfırdan başlat
         if (!string.Equals(savedState.MachineCode, machineCode, StringComparison.OrdinalIgnoreCase))
         {
             var resetLicense = new LicenseInfo
@@ -49,7 +39,7 @@ public class LicenseService
                 IsValid = true,
                 Tier = LicenseTier.Free,
                 MachineCode = machineCode,
-                MaxUrlLimit = 20,
+                MaxUrlLimit = 10,
                 UsedUrlCount = 0,
                 LicenseKey = string.Empty
             };
@@ -58,7 +48,6 @@ public class LicenseService
             return resetLicense;
         }
 
-        // Kayıtlı key varsa tekrar doğrula
         if (!string.IsNullOrWhiteSpace(savedState.LicenseKey))
         {
             var validated = ValidateLicense(savedState.LicenseKey, machineCode);
@@ -71,13 +60,12 @@ public class LicenseService
             }
         }
 
-        // Geçerli key yoksa free moda düş
         var freeLicense = new LicenseInfo
         {
             IsValid = true,
             Tier = LicenseTier.Free,
             MachineCode = machineCode,
-            MaxUrlLimit = 20,
+            MaxUrlLimit = 10,
             UsedUrlCount = savedState.UsedUrlCount,
             LicenseKey = string.Empty
         };
@@ -110,31 +98,13 @@ public class LicenseService
             }
         }
 
-        if (normalized.StartsWith("INAL-FREE-"))
-        {
-            var expected = GenerateLicenseKey(machineCode, LicenseTier.Free);
-
-            if (normalized == expected)
-            {
-                return new LicenseInfo
-                {
-                    IsValid = true,
-                    LicenseKey = normalized,
-                    Tier = LicenseTier.Free,
-                    MachineCode = machineCode,
-                    MaxUrlLimit = 20,
-                    UsedUrlCount = 0
-                };
-            }
-        }
-
         return new LicenseInfo
         {
             IsValid = false,
             LicenseKey = normalized,
             Tier = LicenseTier.Free,
             MachineCode = machineCode,
-            MaxUrlLimit = 20,
+            MaxUrlLimit = 10,
             UsedUrlCount = 0
         };
     }
@@ -163,11 +133,9 @@ public class LicenseService
         if (!validated.IsValid)
             return;
 
-        // Free'de önceki kullanım korunur, Pro'da sıfırlanabilir
-        if (validated.Tier == LicenseTier.Free)
-            validated.UsedUrlCount = current.UsedUrlCount;
-        else
-            validated.UsedUrlCount = 0;
+        validated.UsedUrlCount = validated.Tier == LicenseTier.Pro
+            ? 0
+            : current.UsedUrlCount;
 
         SaveLicenseState(validated);
     }
@@ -175,44 +143,6 @@ public class LicenseService
     public void SaveLicenseInfo(LicenseInfo licenseInfo)
     {
         SaveLicenseState(licenseInfo);
-    }
-
-    public void IncrementUsage(int count = 1)
-    {
-        if (count <= 0)
-            return;
-
-        var current = GetCurrentLicense();
-
-        if (current.Tier == LicenseTier.Pro)
-            return;
-
-        current.UsedUrlCount += count;
-
-        if (current.UsedUrlCount < 0)
-            current.UsedUrlCount = 0;
-
-        SaveLicenseState(current);
-    }
-
-    public int GetRemainingUsage()
-    {
-        var current = GetCurrentLicense();
-
-        if (current.Tier == LicenseTier.Pro)
-            return int.MaxValue;
-
-        return Math.Max(0, current.MaxUrlLimit - current.UsedUrlCount);
-    }
-
-    public bool CanUse(int requestedCount)
-    {
-        var current = GetCurrentLicense();
-
-        if (current.Tier == LicenseTier.Pro)
-            return true;
-
-        return requestedCount <= Math.Max(0, current.MaxUrlLimit - current.UsedUrlCount);
     }
 
     private void SaveLicenseState(LicenseInfo licenseInfo)
@@ -229,7 +159,9 @@ public class LicenseService
         }
         else
         {
-            licenseInfo.MaxUrlLimit = 20;
+            licenseInfo.IsValid = true;
+            licenseInfo.Tier = LicenseTier.Free;
+            licenseInfo.MaxUrlLimit = 10;
 
             if (licenseInfo.UsedUrlCount < 0)
                 licenseInfo.UsedUrlCount = 0;
